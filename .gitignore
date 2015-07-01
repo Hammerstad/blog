@@ -1,0 +1,13 @@
+*.log
+*.pot
+*.pyc
+*.db
+*.swp
+.vagrant
+venv
+*~
+src/settings/local.py
+static/
+logs/
+*.tar
+*.sql
