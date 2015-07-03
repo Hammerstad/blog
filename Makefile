@@ -1,6 +1,6 @@
 help:
-	@echo 'dev          - installs dev requirements and sets up dev environment'
 	@echo 'help         - shows this help message'
+	@echo 'dev          - installs dev requirements and sets up dev environment'
 	@echo 'prod         - install prod requirements and sets up prod environment'
 	@echo 'run          - runs the server'
 	@echo 'superuser    - creates a superuser'
