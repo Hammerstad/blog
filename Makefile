@@ -5,6 +5,10 @@ help:
 	@echo 'run          - runs the server'
 	@echo 'superuser    - creates a superuser'
 	@echo 'sync         - syncs and migrates the database'
+	@echo 'test         - runs all the tests for a given app. Example:'
+	@echo '               make test app=app.blog'
+	@echo 'coverage     - creates code coverage for a given app. Example:'
+	@echo '               make coverage app=app.blog'
 
 dev:
 	@echo "from settings.development import *" > src/settings/local.py
@@ -24,5 +28,11 @@ sync:
 
 superuser:
 	venv/bin/python src/manage.py createsuperuser
+	
+test:
+	venv/bin/python src/manage.py test ${app}
+	
+coverage:
+	coverage run --source='src' src/manage.py test ${app}
 
-.PHONY: dev prod run superuser sync
+.PHONY: dev prod run superuser sync test coverage
