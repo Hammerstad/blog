@@ -47,8 +47,8 @@ ROOT_URLCONF = 'urls'
 
 WSGI_APPLICATION = 'wsgi.application'
 
-LANGUAGE_CODE = 'nb'
-STANDARD_USER_LANGUAGE = 'nb'
+LANGUAGE_CODE = 'en-gb'
+STANDARD_USER_LANGUAGE = 'en-gb'
 DATE_FORMAT = 'd.m.Y'
 TIME_FORMAT = 'H.i'
 

@@ -14,7 +14,7 @@ class Post(models.Model):
 	title = models.CharField(max_length=144)
 	content = models.TextField()
 	summary = models.TextField()
-	tags = models.ManyToManyField(Tag, related_name='tags', verbose_name="Tags")
+	tags = models.ManyToManyField(Tag, related_name='tags', verbose_name="Tags", blank=True)
 	
 	def save(self, *args, **kwargs):
 		self.summary = self.content[:300]
